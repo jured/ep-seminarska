@@ -1,0 +1,26 @@
+<div class="panel-group">
+    <h2>Edit Costumer</h2>
+
+
+    <fieldset>
+        <!-- Text input-->
+        <div class="form-group">
+            <label>Email</label><input ng-model="editedUser.email" id="email" class="form-control input-sm" required
+                                       type="email">
+            <label>Name</label><input ng-model="editedUser.name" id="name" class="form-control input-sm" required
+                                      type="text">
+            <label>Last Name</label><input ng-model="editedUser.lastname" id="lastname"
+                                           class="form-control input-sm" required type="text">
+            <label>Address</label><input ng-model="editedUser.address" id="address" class="form-control input-sm"
+                                         required type="text">
+            <label>Phone</label><input ng-model="editedUser.phone" id="phone" class="form-control input-sm" required
+                                       type="text">
+            <label>Password</label><input ng-model="editedUser.password" id="password" class="form-control input-sm"
+                                       type="password">
+        </div>
+
+    </fieldset>
+    <div>
+        <button class="btn btn-primary" ng-click="updateCostumer(editedUser)" ng-if="token">Save</button>
+    </div>
+</div>

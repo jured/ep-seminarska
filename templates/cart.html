@@ -1,0 +1,22 @@
+<div class="panel-group">
+
+    <h1>Shopping cart</h1>
+
+    <ul class="list-group">
+
+        <div ng-repeat="cart_item in cart.items" class="panel panel-default">
+
+            <p>Product name: {{cart_item.item.name}}</p>
+
+            <p>Price: {{cart_item.item.price}} €</p>
+
+            <p>Quantity:<input type="number" ng-model="cart_item.number" ng-change="refresCart()"></p>
+            <li class="btn btn-primary" ng-click="removeFromCart(cart_item)">Remove from cart</li>
+
+        </div>
+    </ul>
+
+
+</div>
+<h2>Total price: {{cart.price}} €</h2>
+<div class="btn btn-default" ng-click="placeOrder()">Place order</div>
